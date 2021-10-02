@@ -22,22 +22,46 @@ header {
     justify-content: space-between;
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    padding: 0.5rem 1rem;
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+}
+header > a {
+   
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--clr-light);
+    transition: background-color 0.1s;
+}
+header > a:hover {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
 }
 
+header > nav {
+    font-size: 1.4rem;
+}
 header > nav > ul > li {
     display: inline-block;
+    margin-top: 1rem;
     
 }
 header > nav > ul > li > a {
     display: inline-block;
     padding: 0.5rem;
+    padding-bottom: 2rem;
     text-decoration: none;
     color: var(--clr-light);
+    transition: background-color 0.5s;
 }
 header > nav > ul > li > a:hover {
     background-color: var(--clr-light);
-    color: var(--clr-dark);
+    color: var(--clr-bg-main);
+}
+
+header > nav > ul > i {
+    display: hidden;
+    color: #3a3fcf;
 }
 
 /* body */
@@ -53,6 +77,7 @@ section > h1 {
     margin-top: 3rem;
     margin-bottom: 2rem;
     font-size: 4rem;
+    color: var(--clr-bg-main);
 }
 #profile-pic {
     width: 15rem;
@@ -79,8 +104,13 @@ section > h1 {
     align-self: center;
 }
 .bio-text > p {
-    font-size: 1.5rem;
-    margin: 1rem ;
+    font-size: 2rem;
+    margin: 1.6rem ;
+}
+.social-media > p {
+    font-size: 2rem;
+    margin: 1.6rem;
+    margin-bottom: 3.6rem;
 }
 #skills {
     background-color: var(--clr-dark);
@@ -103,6 +133,13 @@ section > h1 {
     color: var(--clr-dark);
 
 }
+.contact-section-body {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+    max-width: 1050px;
+    align-self: center;
+}
 .social-media > ul > li {
     display: inline-block;
     
@@ -120,7 +157,8 @@ section > h1 {
     color: var(--clr-dark);
 }
 .social-media > ul > li> a:hover {
-    border-bottom: 4px solid var(--clr-dark);
+    border-bottom: 4px solid var(--clr-bg-main);
+    color: var(--clr-bg-main);
 }
 .social-media > ul > li > a > span {
     margin: 0.3rem;
@@ -135,8 +173,32 @@ section > h1 {
 footer {
     height: 5rem;
     background-color: var(--clr-dark);
-    color: var(--clr-light);
+    color: var(--clr-accent-light);
     text-align: center;
     font-size: 1.5rem;
     padding-top: 2rem;
+}
+
+
+@media screen and (max-width: 860px) {
+
+    .bio-section-body{
+        flex-direction: column-reverse;
+    }
+    #profile-pic {
+        width: 25rem;
+        margin-bottom: 3rem;
+    }
+    .social-media > ul {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .social-media > ul > li {
+        display: block;
+    }
+    .social-media > ul > li > a:hover {
+        border-right: 4px solid var(--clr-dark);
+        border-bottom: none;
+    }
 }
