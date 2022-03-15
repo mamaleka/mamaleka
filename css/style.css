@@ -24,7 +24,13 @@ header {
     color: var(--clr-light);
     padding: 0rem 1rem;
     padding-top: 1rem;
+    position: fixed; /* Fixed position - sit on top of the page */
+    top: 0;
+    width: 100%; /* Full width */
+    transition: 0.2s; 
+    font-size: 2rem;
 }
+
 header > a {
    
     padding: 0.5rem;
@@ -32,6 +38,7 @@ header > a {
     text-decoration: none;
     color: var(--clr-light);
     transition: background-color 0.1s;
+
 }
 header > a:hover {
     background-color: var(--clr-light);
@@ -90,7 +97,7 @@ section > h1 {
 }
 
 #bio {
-    
+    margin-top: 2rem;
     background-color: var(--clr-light);
     color: var(--clr-dark);
 
