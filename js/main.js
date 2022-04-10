@@ -10,3 +10,14 @@ function scrollFunction() {
     document.getElementById('header').removeAttribute('style');
   }
 }
+
+const menuBtn = document.getElementById('menu-button')
+const menu = document.getElementById('menu')
+let showMenu = false;
+
+const toggleShowMenu = () => {
+  showMenu = !showMenu
+  menu.style.display = showMenu?  "none": "block";
+
+}
+menuBtn.addEventListener('click', toggleShowMenu)

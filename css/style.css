@@ -1,6 +1,8 @@
 :root {
     --clr-light: #ebebff;
-    --clr-dark: #1f1f1f;
+    --clr-on-light: #3235eb;
+    --clr-dark: #131438;
+    --clr-on-dark: #afb1fc;
     --clr-accent-dark: rgb(48, 107, 172);
     --clr-accent-light: #80acdb;
     --clr-bg-main: #3a3fcf;
@@ -17,29 +19,27 @@
 
 
 /* Header  */
-header {
+#header {
     display: flex;
     justify-content: space-between;
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    padding: 0rem 1rem;
-    padding-top: 1rem;
-    position: fixed; /* Fixed position - sit on top of the page */
+    padding: 1rem 1rem 1rem 1rem;
+    position: fixed;
     top: 0;
-    width: 100%; /* Full width */
-    transition: 0.2s; 
+    width: 100%;
+    transition: 0.4s; 
     font-size: 2rem;
+    align-items: center;
+    /* border-bottom: solid 1px var(--clr-light); */
 }
 
-header > a {
-   
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+header > a {   
     text-decoration: none;
     color: var(--clr-light);
-    transition: background-color 0.1s;
-
+    /* transition: background-color 0.1s; */
 }
+
 header > a:hover {
     background-color: var(--clr-light);
     color: var(--clr-dark);
@@ -50,13 +50,13 @@ header > nav {
 }
 header > nav > ul > li {
     display: inline-block;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     
 }
 header > nav > ul > li > a {
     display: inline-block;
     padding: 0.5rem;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
     text-decoration: none;
     color: var(--clr-light);
     transition: background-color 0.5s;
@@ -124,21 +124,34 @@ section > h1 {
     color: var(--clr-light);
 
 }
+#skills > h1 {
+    color: var(--clr-on-dark);
+}
 #experience {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-
 }
+
+#experience > h1 {
+    color: var(--clr-on-light);
+}
+
 #projects {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-
-
 }
+
+#projects > h1 {
+    color: var(--clr-on-dark);
+}
+
 #contact {
     background-color: var(--clr-light);
     color: var(--clr-dark);
+}
 
+#contact > h1 {
+    color: var(--clr-on-light);
 }
 .contact-section-body {
     display: flex;
@@ -172,9 +185,6 @@ section > h1 {
 }
 
 
-section > h1 {
-    text-align: center;
-}
 
 /* footer */
 footer {
@@ -185,7 +195,9 @@ footer {
     font-size: 1.5rem;
     padding-top: 2rem;
 }
-
+.fa-bars {
+    display: none;
+}
 
 @media screen and (max-width: 860px) {
 
@@ -207,5 +219,40 @@ footer {
     .social-media > ul > li > a:hover {
         border-right: 4px solid var(--clr-dark);
         border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 750px ) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* opacity: 0.6; */
+    }
+    .fa-bars {
+        display: inline-block;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        
+    }
+    #menu {
+        display: none;
+    }
+
+    header > nav {
+        width: 100%;
+        padding-right: 1rem;
+        /* display: none; */
+    }
+    header > nav > ul > li {
+        display: block;
+        text-align: end;
+        margin-top: 1rem;        
+    }
+
+    header > nav > ul > li > a {
+        display: block;
+        padding: 0.5rem;
     }
 }
